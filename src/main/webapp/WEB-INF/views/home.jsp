@@ -36,16 +36,16 @@
 		<div class="row">
 			<div class="col-sm">
 				<h3>List of users:</h3>
-				<table class="table table-striped" style="width: 70%;">
-					<th>Name</th><th>Email</th><th>City</th><th>State</th><th>Country</th>
+				<table class="table .table-hover" style="width: 70%;">
+					<th>#</th><th>Name</th><th>Email</th><th>City</th><th>State</th><th>Country</th>
 						<c:choose>
 							<c:when test="${not empty users}">
-					       		<c:forEach var="user" items="${users}">
-					       			<tr><td>${user.fullName}</td><td><a href="mailto:${user.email}">${user.email}</a></td><td>${user.city}</td><td>${user.state}</td><td>${user.country}</td></tr>
+					       		<c:forEach var="user" items="${users}" varStatus="loop">
+					       			<tr><td>${loop.index + 1}</td><td>${user.fullName}</td><td><a href="mailto:${user.email}">${user.email}</a></td><td>${user.city}</td><td>${user.state}</td><td>${user.country}</td></tr>
 					       		</c:forEach>
 					    	</c:when>
 							<c:otherwise>
-					        	<tr><td colspan="5">No users found in the system.</td></tr>
+					        	<tr><td colspan="6">No users found in the system.</td></tr>
 						    </c:otherwise>
 						</c:choose>
 				</table>
