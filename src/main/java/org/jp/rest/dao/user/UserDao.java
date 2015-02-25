@@ -12,5 +12,5 @@ import org.jp.rest.domain.User;
  *
  */
 public interface UserDao {
-	List<User> listAllUsers();
+	List<User> listAllUsers() throws Exception;
 }

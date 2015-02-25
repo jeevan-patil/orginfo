@@ -23,7 +23,7 @@ public class UserDaoImpl implements UserDao {
 
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<User> listAllUsers() {
+	public List<User> listAllUsers() throws Exception {
 		return entityManager.createQuery("select u from User u").getResultList();
 	}
 
