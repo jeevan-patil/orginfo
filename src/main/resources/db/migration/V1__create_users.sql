@@ -1,6 +1,5 @@
-create schema invent;
 
-CREATE TABLE `invent`.`users` (
+CREATE TABLE `users` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `full_name` VARCHAR(255) NULL DEFAULT NULL,
   `email` VARCHAR(255) NOT NULL,
@@ -17,3 +16,4 @@ CREATE TABLE `invent`.`users` (
   
   INSERT INTO `users` VALUES (1,'Jeevan Patil','jbkpatil@gmail.com','jeevan','Pune','Maharashtra','India','ROLE_ADMIN',1,NULL,NULL);
   INSERT INTO `users` VALUES (2,'Chandan Nayak','travion@gmail.com','chandan','Pune','Maharashtra','India','ROLE_ADMIN',1,NULL,NULL);
+  INSERT INTO `users` VALUES (3,'Sachin Tendulkar','sachin@gmail1.com','sachin','Pune','Maharashtra','India','ROLE_ADMIN',1,NULL,NULL);
