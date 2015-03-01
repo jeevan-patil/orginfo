@@ -1,6 +1,6 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ page session="false"%>
-<html ng-app>
+<html>
 <head>
 <title>Organization information</title>
 <meta charset="utf-8">
@@ -21,13 +21,13 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a class="navbar-brand" href="#.">OrgInfo</a>
+				<a class="navbar-brand" href="${pageContext.request.contextPath}/">OrgInfo</a>
 			</div>
 			<div id="navbar" class="collapse navbar-collapse">
 				<ul class="nav navbar-nav">
-					<li class="active"><a href="#.">Home</a></li>
-					<li><a href="#.">About</a></li>
-					<li><a href="#.">Contact</a></li>
+					<li class="active"><a href="#.">Organizations</a></li>
+					<li><a href="#.">BU</a></li>
+					<li><a href="#.">Employees</a></li>
 				</ul>
 			</div>
 			<!--/.nav-collapse -->
@@ -35,7 +35,6 @@
 	</nav>
 
 	<div class="container">
-
 		<div class="starter-template">
 			<h1>Organization Information</h1>
 			<p class="lead">
@@ -44,7 +43,6 @@
 				Spring framework is used to write restful services which provide JSON data.
 			</p>
 		</div>
-
 	</div>
 
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/script/jquery-1.11.0.js"></script>
