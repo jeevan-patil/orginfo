@@ -61,9 +61,9 @@
 
 	<!-- JavaScript files written by dev's -->
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/script/app.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/script/org/controllers/orglist.controller.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/script/org/controllers/home.controller.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/script/org/controllers/bunit.controller.js"></script>
-	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/script/org/controllers/emp.controller.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/script/app/org/controller/orglist.controller.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/script/app/home/controller/home.controller.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/script/app/bunit/controller/bunit.controller.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/script/app/employee/controller/emp.controller.js"></script>
 </body>
 </html>
