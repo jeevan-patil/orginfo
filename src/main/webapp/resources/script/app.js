@@ -23,6 +23,11 @@ angular
     	controller: 'OrganizationCtrl',
 	    url : '/organizations'
     })
+    .state('organizations.new', {
+    	templateUrl: 'resources/views/organization/create_new_org.html',
+    	controller: 'OrganizationCtrl',
+	    url : '/new'
+    })
     .state('bu', {
     	templateUrl: 'resources/views/bunit/bunits.html',
     	controller: 'BunitCtrl',
