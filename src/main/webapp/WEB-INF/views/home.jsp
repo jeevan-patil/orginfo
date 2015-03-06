@@ -63,5 +63,7 @@
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/script/app.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/script/org/controllers/orglist.controller.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/script/org/controllers/home.controller.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/script/org/controllers/bunit.controller.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/script/org/controllers/emp.controller.js"></script>
 </body>
 </html>

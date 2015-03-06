@@ -22,6 +22,16 @@ angular
     	templateUrl: 'resources/views/organization/orgs.html',
     	controller: 'OrganizationCtrl',
 	    url : '/organizations'
+    })
+    .state('bu', {
+    	templateUrl: 'resources/views/bunit/bunits.html',
+    	controller: 'BunitCtrl',
+    	url: 'bu'
+    })
+    .state('emp', {
+    	templateUrl: 'resources/views/emp/emp.html',
+    	controller: 'EmpCtrl',
+    	url: 'emp'
     });
 })
 .run(function($state) {
