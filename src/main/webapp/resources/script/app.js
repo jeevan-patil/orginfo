@@ -14,7 +14,7 @@ angular
 .config(function ($stateProvider) {
 	$stateProvider
 	.state('/', {
-        templateUrl: 'resources/views/home.html',
+        templateUrl: 'resources/views/home/home.html',
         controller: 'HomeCtrl',
         url : '/'
     })
