@@ -9,6 +9,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * 
@@ -25,6 +27,7 @@ public class OrganizationServiceImpl implements OrganizationService {
 	private OrganizationDao orgDao;
 
 	@Override
+	@Transactional(propagation = Propagation.REQUIRED, readOnly = true)
 	public List<Organization> list() {
 		List<Organization> orgList = new ArrayList<Organization>();
 		try {
@@ -36,13 +39,14 @@ public class OrganizationServiceImpl implements OrganizationService {
 	}
 
 	@Override
+	@Transactional(propagation = Propagation.REQUIRED, readOnly = false)
 	public Boolean create(Organization org) {
-		boolean response = true;
+		boolean response = false;
 		try {
 			orgDao.create(org);
+			response = true;
 		} catch(Exception e) {
 			_log.error("Error occurred creating an organization.");
-			response = false;
 		}
 		return response;
 	}

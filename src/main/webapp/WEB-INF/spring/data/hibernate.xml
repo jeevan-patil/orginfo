@@ -11,8 +11,6 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<context:property-placeholder location="classpath:*.properties"/>
 	
-	<tx:annotation-driven transaction-manager="transactionManager" />
-
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="${jdbc.driverClassName}" />
@@ -38,6 +36,8 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
 		<property name="entityManagerFactory" ref="entityManagerFactory" />
 	</bean>
+
+	<tx:annotation-driven transaction-manager="transactionManager" />
 
 	<bean id="flyway" class="org.flywaydb.core.Flyway" init-method="migrate">
 		<property name="baselineOnMigrate" value="true" />

@@ -11,6 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * 
@@ -32,6 +33,12 @@ public class HomeController {
 		List<User> users = userService.listAllUsers();
 		model.addAttribute("users", users);
 		return "home";
+	}
+
+	@ResponseBody
+	@RequestMapping(value = "/users", method = RequestMethod.GET)
+	public List<User> listUsers() {
+		return userService.listAllUsers();
 	}
 	
 }

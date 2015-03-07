@@ -37,7 +37,7 @@ public class Organization implements Serializable {
 	private String type;
 
 	@Column(name = "employee_count")
-	private Integer empCount;
+	private Long empCount;
 
 	@Column(name = "address", length = 255)
 	private String address;
@@ -55,11 +55,11 @@ public class Organization implements Serializable {
 	private String annualRevenue;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "created_at")
+	@Column(name = "created_date")
 	private Date createdAt;
 
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column(name = "updated_at")
+	@Column(name = "updated_date")
 	private Date updatedAt;
 
 	public Long getId() {
@@ -86,11 +86,11 @@ public class Organization implements Serializable {
 		this.type = type;
 	}
 
-	public Integer getEmpCount() {
+	public Long getEmpCount() {
 		return empCount;
 	}
 
-	public void setEmpCount(Integer empCount) {
+	public void setEmpCount(Long empCount) {
 		this.empCount = empCount;
 	}
 

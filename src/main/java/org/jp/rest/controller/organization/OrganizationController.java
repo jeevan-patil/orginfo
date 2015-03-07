@@ -31,7 +31,7 @@ public class OrganizationController {
 	}
 
 	@ResponseBody
-	@RequestMapping(value = "/org/create", method = RequestMethod.GET)
+	@RequestMapping(value = "/org/create", method = RequestMethod.POST)
 	public Boolean create(@RequestBody Organization org) {
 		return orgService.create(org);
 	}
