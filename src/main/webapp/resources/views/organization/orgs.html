@@ -1,7 +1,31 @@
 <div data-ng-controlle="OrganizationCtrl" class="container">
 	<div class="starter-template">
+	<h3>List of Organizations</h3>
+		<table class="table table-hover">
+			<tbody>
+				<tr>
+					<th>#</th>
+					<th>Name</th>
+					<th>Industry</th>
+					<th>Annual Revenue</th>
+					<th>Address</th>
+					<th>Website</th>
+					<th>Phone</th>
+					<th>Contact</th>
+				</tr>
+				<tr data-ng-repeat="org in orgs">
+					<td>{{ $index + 1 }}</td>
+					<td>{{ org.name }}</td>
+					<td>{{ org.type }}</td>
+					<td>{{ org.annualRevenue }}</td>
+					<td>{{ org.address }}</td>
+					<td>{{ org.website }}</td>
+					<td>{{ org.phone }}</td>
+					<td><a href="mailto:{{ org.email }}">{{ org.email }}</a></td>
+				</tr>
+			</tbody>
+		</table>
 		<div>
-			<h3 data-ng-click="listUsers()">List of Organizations</h3>
 			<input class="btn btn-default" data-ui-sref="organizations.new" type="button" value="Create New Organization">
 			<hr>
 		</div>

@@ -1,6 +1,7 @@
 package org.jp.rest.service.organization;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import org.jp.rest.dao.organization.OrganizationDao;
@@ -43,6 +44,7 @@ public class OrganizationServiceImpl implements OrganizationService {
 	public Boolean create(Organization org) {
 		boolean response = false;
 		try {
+			org.setCreatedAt(new Date());
 			orgDao.create(org);
 			response = true;
 		} catch(Exception e) {
