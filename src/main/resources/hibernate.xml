@@ -9,8 +9,7 @@ http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
 http://www.springframework.org/schema/context 
 http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-	<context:property-placeholder location="classpath:*.properties"/>
-	
+	<!-- datasource bean used by entity manager -->
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="${jdbc.driverClassName}" />
@@ -21,7 +20,8 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<!-- Declare a JPA entityManagerFactory -->
 	<bean id="entityManagerFactory"
-		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean" depends-on="flyway">
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean"
+		depends-on="flyway">
 		<property name="persistenceXmlLocation" value="classpath*:META-INF/persistence.xml"></property>
 		<property name="persistenceUnitName" value="hibernatePersistenceUnit" />
 		<property name="dataSource" ref="dataSource" />
@@ -39,6 +39,7 @@ http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
 	<tx:annotation-driven transaction-manager="transactionManager" />
 
+	<!-- Flyway DB migration setup -->
 	<bean id="flyway" class="org.flywaydb.core.Flyway" init-method="migrate">
 		<property name="baselineOnMigrate" value="true" />
 		<property name="locations" value="classpath:db/migration/" />
