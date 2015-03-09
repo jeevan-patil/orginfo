@@ -1,6 +1,6 @@
 <div data-ng-controlle="OrganizationCtrl" class="container">
 	<div class="starter-template">
-	<h3>List of Organizations</h3>
+	<h3>List of Organizations</h3>[<label data-ui-sref="organizations.new">Create New</label>]
 		<table class="table table-hover">
 			<tbody>
 				<tr>
@@ -25,11 +25,10 @@
 				</tr>
 			</tbody>
 		</table>
-		<div>
-			<input class="btn btn-default" data-ui-sref="organizations.new" type="button" value="Create New Organization">
-			<hr>
+		<hr>
+		<div class="orgCreation">
+			<div data-ui-view></div>
 		</div>
-		<div data-ui-view></div>
 	</div>
 </div>
 

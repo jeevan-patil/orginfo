@@ -5,7 +5,7 @@ angular.module('orgInfoApp').controller('OrganizationCtrl', [ '$scope', '$resour
 	$scope.neworg = {};
 	$scope.orgs = [];
 
-	$scope.$on('$viewContentLoaded', function(){
+	$scope.$on('$viewContentLoaded', function() {
 		$scope.listOrgs();
 	});
 
@@ -14,6 +14,7 @@ angular.module('orgInfoApp').controller('OrganizationCtrl', [ '$scope', '$resour
 		Org.save($scope.neworg, function(response) {
 			console.log(response);
 			$scope.orgs.push($scope.neworg);
+			$('.orgCreation').hide();
 		});
     };
 
