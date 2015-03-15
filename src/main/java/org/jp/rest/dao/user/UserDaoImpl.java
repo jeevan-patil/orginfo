@@ -19,7 +19,7 @@ import org.springframework.stereotype.Repository;
 public class UserDaoImpl implements UserDao {
 	
 	@PersistenceContext
-    private EntityManager entityManager;
+        private EntityManager entityManager;
 
 	@SuppressWarnings("unchecked")
 	@Override
