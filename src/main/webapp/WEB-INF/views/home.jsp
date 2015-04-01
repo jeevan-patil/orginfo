@@ -65,5 +65,6 @@
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/script/app/home/controller/home.controller.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/script/app/bunit/controller/bunit.controller.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/script/app/employee/controller/emp.controller.js"></script>
+	<script type="text/javascript" src="${pageContext.request.contextPath}/resources/script/app/org/service/org.service.js"></script>
 </body>
 </html>
