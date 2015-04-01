@@ -19,7 +19,7 @@ import org.springframework.stereotype.Repository;
 public class OrganizationDaoImpl implements OrganizationDao {
 
 	@PersistenceContext
-    private EntityManager entityManager;
+        private EntityManager entityManager;
 
 	@SuppressWarnings("unchecked")
 	@Override

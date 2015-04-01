@@ -18,7 +18,8 @@ import org.springframework.transaction.annotation.Transactional;
  * @author jeevan
  * @date 07-Mar-2015 12:12:25 am
  * @version 
- *
+ * Organization Dao implementation
+ * 
  */
 @Service("orgService")
 public class OrganizationServiceImpl implements OrganizationService {
@@ -53,4 +54,5 @@ public class OrganizationServiceImpl implements OrganizationService {
 		return response;
 	}
 
+	// TOTO update, delete user
 }
