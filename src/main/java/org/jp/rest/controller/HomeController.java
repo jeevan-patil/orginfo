@@ -40,5 +40,14 @@ public class HomeController {
 	public List<User> listUsers() {
 		return userService.listAllUsers();
 	}
+
+	/**
+	 * Mapping a dummy URL. This will make a server side redirect to /users
+	 * @return
+	 */
+	@RequestMapping(value = "/initial", method = RequestMethod.GET)
+	public String redirect() {
+		return "redirect:/users";
+	}
 	
 }
